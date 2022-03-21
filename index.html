@@ -11,7 +11,7 @@
 <body>
   <ul class="menu">
     <li class="menu-text text-lg">Recipe Search</li>
-    <li><a href="#find-a-meal">Find a Meal</a></li>
+    <li><a href="#search-for-a-meal">Search For a Meal</a></li>
     <li><a href="#about-us">About Us</a></li>
   </ul>
 
@@ -23,28 +23,16 @@
           </p>
         </div>
     </section>
-    
-     <main>
-            <!-- Start search form -->
-            <div>
-              <h4>What are you hungry for?</h4>
-              <div class="button-group no-graps">
-                <a class="secondary button" id="cheap-btn">Cheap</a>
-                <a class="secondary button" id="vegetarian-btn">Vegetarian</a>
-                <a class="secondary button" id="popular-btn">Popular</a>
-                <a class="secondary button" id="random-btn">Random</a>
-              </div>  
-            <div>
-            <!--Search result container -->
-            <div>
-                <h4>Search Results</h4>
-            </div>
-            <!--Start about us section-->
-            <div>
-                <h4>Learn More About SearchRecipies</h4>
-                <p>Input Text</p>
-            </div>
+    <main>
+      <div class="input-group">
+        <span class="input-group-label"></span>
+        <input class="input-group-field" type="name">
+        <div class="input-group-button">
+          <input type="submit" class="button" value="Search">
+        </div>
+      </div>
     </main>
+  
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/java/script.js"></script>      
