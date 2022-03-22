@@ -14,3 +14,31 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: blue;
+  }

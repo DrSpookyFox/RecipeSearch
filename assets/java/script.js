@@ -3,6 +3,7 @@ var nameInputEl = document.querySelector("#recipeSearch");
 
 //Global Variables
 var apiKey = "76fc45feadbe46379e4c23a107066a2f";
+var resultsArray = [];
 
 
 var formSumbitHandler = function(event) {
@@ -20,7 +21,7 @@ var formSumbitHandler = function(event) {
 
 //function calls spooacular API to get recipe info
 var searchRecipies = function(data) {
-    // format the github api url
+    // format the spoonacular api url
     var apiUrl = `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${apiKey}`
       
     // make a request to the url
@@ -32,9 +33,22 @@ var searchRecipies = function(data) {
       });
     };
 
-    var displayQuery = function(id) {
-        console.log(id);
-        console.log(searchTerm);
+    var displayQuery = function(data) {
+        console.log(data);
+        console.log(recipeSearch);
+    };
+
+    var getRecipeInformation = function(data) {
+        // format the spoonacular api url
+        var apiUrl2 = `https://api.spoonacular.com/recipes/{id}/information?=apiKey=${apiKey}`
+
+        //make a request to the url
+        fetch(apiUrl2).then(function(response) {
+            console.log(response);
+            response.json().then(function(id) {
+                searchRecipies(id);
+            });
+        });
     };
    
     userFormEl.addEventListener("submit", formSumbitHandler);

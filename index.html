@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+  <header>
+    <h1>Recipe Search</h1>
+  </header>
+
   <ul class="menu">
-    <li class="menu-text text-lg">Recipe Search</li>
     <li><a href="#search-for-a-meal">Search For a Meal</a></li>
     <li><a href="#about-us">About Us</a></li>
   </ul>
-
+  
     <section class="hero">
         <div class="hero-cta">
           <h4>Find Your Next Meal With Search Recipies</h4>
@@ -24,8 +27,8 @@
         </div>
     </section>
     <main>
-      <div class="card">
-        <h4 class="card-header text-uppercase">Search For Your Next Meal</h4>
+      <div class="card" style="width: 400px";>
+        <h4 class="columns medium-6 large-4 text-uppercase">Search For Your Next Meal</h4>
         <form id="search-form" class="card-body">
           <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
           <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
