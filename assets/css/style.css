@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bg-img { 
+    /* The image used */
+    background-image: src = "/assets/image/kitchen.jpg";
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    border: 2px black solid;
+    background-color: whitesmoke;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: blue;
+  }
