@@ -18,6 +18,8 @@ body, html {
   header {
     display: flex;
     justify-content: center;
+    border: 2px black solid;
+    background-color: whitesmoke;
   }
 
   .menu {
