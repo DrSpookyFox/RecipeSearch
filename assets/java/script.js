@@ -22,7 +22,7 @@ var formSumbitHandler = function(event) {
 //function calls spooacular API to get recipe info
 var searchRecipies = function(data) {
     // format the spoonacular api url
-    var apiUrl = `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${apiKey}`
+    var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pizza`
       
     // make a request to the url
     fetch(apiUrl).then(function(response) {
