@@ -19,17 +19,18 @@
         <div class="hero-cta">
           <h4>Find Your Next Meal With Search Recipies</h4>
           <p>
-            Can't make up your mind on what to eat next? Let us help you find it!
+            Can't make up your mind on what to eat next? Let us help you find it! Search for thousands of recipies with detailed ingredient lists, photos and preperation instructions!
           </p>
         </div>
     </section>
     <main>
-      <div class="input-group">
-        <span class="input-group-label"></span>
-        <input class="input-group-field" type="name">
-        <div class="input-group-button">
-          <input type="submit" class="button" value="Search">
-        </div>
+      <div class="card">
+        <h4 class="card-header text-uppercase">Search For Your Next Meal</h4>
+        <form id="search-form" class="card-body">
+          <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
+          <input name="recipe" id="recipeName" type="text" autofocus="true" class="form-input" />
+          <button type="search" class="btn">Search</button>
+        </form>
       </div>
     </main>
   
