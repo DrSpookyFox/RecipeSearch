@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,61 +7,140 @@
     <title>Recipe Search</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-
 <body>
-    <header>
-        <h1>
-            <a href="/">Recipe Search</a>
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#search-for-recipies">Search For Recipies</a>
-                </li>
-                <li>
-                    <a href="#learn-more-about-us">Learn More About Us</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Recipe Search</h1>
+  </header>
 
+  <ul class="menu">
+    <li><a href="#search-for-a-meal">Search For a Meal</a></li>
+    <li><a href="#about-us">About Us</a></li>
+  </ul>
+  
     <section class="hero">
         <div class="hero-cta">
-            <h2>Find Your Next Meal With SearchRecipies</h2>
-            <p>
-                We offer you the ability to find the perfect recipe for your next meal that works within you budget!
-            </p>
+          <h4>Find Your Next Meal With Recipe Search</h4>
+          <p>
+            Can't make up your mind on what to eat next? Let us help you find it! Search for thousands of recipies with detailed ingredient lists, photos and preperation instructions!
+          </p>
         </div>
     </section>
-
     <main>
-        <!-- Start search form -->
-        <div>
-            <h2>Search Recipies</h2>
-            <input type="text" />
-            <button type="button" </button>
-        </div>
-        <!--Search result container -->
-        <div>
-            <h2>Search Results</h2>
-        </div>
-        <!--Start about us section-->
-        <div>
-            <h2>Learn More About SearchRecipies</h2>
-            <p>Input Text</p>
-            <section>
-                <address>
-                    <a href="Portfolio">Portfolio</a>
-                    <a href="Portfolio">Portfolio</a>
-                    <a href="Portfolio">Portfolio</a>
-                    <a href="Portfolio">Portfolio</a>
-                    <a href="Portfolio">Portfolio</a>
-                    <a href="Portfolio">Portfolio</a>
-                </address>
-            </section>
-        </div>
-    </main>
-    <script src="./assets/java/script.js"></script>
-</body>
+      <div class="grid-container">
+      <div class="card" style="width: 400px";>
+        <h4 class="columns medium-6 large-4 text-uppercase">Search For Your Next Meal</h4>
+        <form id="search-form" class="card-body">
+          <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
+          <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
+          <button type="search" class="btn">Search</button>
+        </form>
+      </div>
+      </div>
 
+      <!--Search results desplayed here -->
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+
+          <div class="cell small-3"><div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <p>This is a simple card with an image.</p>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div>
+        <h4>About Us</h4>
+      </div>
+      
+              
+  
+
+    </main>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/java/script.js"></script>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>   
+</body>
 </html>
