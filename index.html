@@ -30,101 +30,19 @@
       <div class="card" style="width: 400px";>
         <h4 class="columns medium-6 large-4 text-uppercase">Search For Your Next Meal</h4>
         <form id="search-form" class="card-body">
-          <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
+          <label class="form-label" for="recipeSearch">Please enter a recipe name, ingredient or diet type</label>
           <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
-          <button type="search" class="btn">Search</button>
+          <button type="search" class="btn" id="search-btn">Search</button>
         </form>
       </div>
       </div>
 
-      <!--Search results desplayed here -->
-      <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
-
-          <div class="cell small-3"><div class="card">
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <p>This is a simple card with an image.</p>
-            </div>
-          </div></div>
+        <!--Search results desplayed here -->
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x" id="cards-container">
+ 
+          </div>
         </div>
-      </div>
 
       <div>
         <h4>About Us</h4>
@@ -137,10 +55,20 @@
   
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/java/script.js"></script>  
+    <script src="./assets/js/script.js"></script>  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
 
     <!-- Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>   
 </body>
 </html>
+
+<!-- <div class="cell">
+  <div class="card">
+    <img src="url"> -->
+    <!-- <img class="image">
+    <div class="card-section">
+      <p>This is a simple card with an image.</p>
+    </div>
+  </div>
+</div> -->
