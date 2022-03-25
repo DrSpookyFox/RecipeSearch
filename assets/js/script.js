@@ -1,8 +1,9 @@
 var userFormEl = document.querySelector("#search-form");
 var nameInputEl = document.querySelector("#recipeSearch");
-var recipeImgEl = document.querySelector("#recipe-search-img");
+var recipeImgEl = document.querySelector("#recipe-img");
 var recipeSearchTerm = document.querySelector("#recipe-container");
-
+var recipeTitleEl = document.querySelector('#title')
+var recipeContainer = document.querySelector('.grid-container');
 //Global Variables
 var apiKey = "76fc45feadbe46379e4c23a107066a2f";
 
@@ -35,7 +36,8 @@ var searchRecipies = function(recipe) {
         // console.log(response);
         response.json().then(function(data) {
           // console.log(data.results);
-          recipeResults(data.results);
+          var htmlRecipeCards = recipeResults(data.results);
+          document.getElementById("cards-container").innerHTML = htmlRecipeCards;
         });
       } else {
         alert('Error: ' + response.statusText);
@@ -45,13 +47,19 @@ var searchRecipies = function(recipe) {
       alert('Unable to connect to Spoonacular');
     });
 };
-
+  
 //display recipies on cards formatted in the HTML
-  var recipeResults = function(results) {
-    // console.log(results);
+  var recipeResults = function(results) { 
+    var htmlCards = "";
     for (var i = 0; i < results.length; i++) {
-    console.log(results[i]);
+    htmlCards += `<div class="cell small-3"><div class="card">
+    <img src="${results[i].image}">
+    <div class="card-section">
+      <p>${results[i].title}</p>
+    </div>
+  </div></div>`
     }
+    return htmlCards
  };
 
     userFormEl.addEventListener("submit", formSumbitHandler);
