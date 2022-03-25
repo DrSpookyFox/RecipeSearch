@@ -4,8 +4,6 @@ var nameInputEl = document.querySelector("#recipeSearch");
 //Global Variables
 var apiKey = "76fc45feadbe46379e4c23a107066a2f";
 
-
-
 var formSumbitHandler = function(event) {
     //Prevents browser from sending the form's input data to a URL
     event.preventDefault();
