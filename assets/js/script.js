@@ -1,9 +1,6 @@
 var userFormEl = document.querySelector("#search-form");
 var nameInputEl = document.querySelector("#recipeSearch");
-var recipeImgEl = document.querySelector("#recipe-img");
-var recipeSearchTerm = document.querySelector("#recipe-container");
-var recipeTitleEl = document.querySelector('#title')
-var recipeContainer = document.querySelector('.grid-container');
+
 //Global Variables
 var apiKey = "76fc45feadbe46379e4c23a107066a2f";
 
@@ -38,6 +35,14 @@ var searchRecipies = function(recipe) {
           // console.log(data.results);
           var htmlRecipeCards = recipeResults(data.results);
           document.getElementById("cards-container").innerHTML = htmlRecipeCards;
+          var allButtons = document.querySelectorAll('.recipe-card');
+          console.log("Found", allButtons.length);
+    
+    for (var i = 0; i < allButtons.length; i++) {
+      allButtons[i].addEventListener('click', function() {
+      console.log(this.getAttribute("data-id"));
+      });
+    }
         });
       } else {
         alert('Error: ' + response.statusText);
@@ -51,8 +56,8 @@ var searchRecipies = function(recipe) {
 //display recipies on cards formatted in the HTML
   var recipeResults = function(results) { 
     var htmlCards = "";
-    for (var i = 0; i < results.length; i++) {
-    htmlCards += `<div class="cell small-3"><div class="card">
+    for (var i = 0; i < results.length; i++ ) {
+    htmlCards += `<div class="cell small-3 recipe-card" data-id="${results[i].id}"><div class="card">
     <img src="${results[i].image}">
     <div class="card-section">
       <p>${results[i].title}</p>
@@ -63,3 +68,5 @@ var searchRecipies = function(recipe) {
  };
 
     userFormEl.addEventListener("submit", formSumbitHandler);
+    
+  
