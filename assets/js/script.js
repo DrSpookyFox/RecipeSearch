@@ -35,9 +35,12 @@ var searchRecipies = function(recipe) {
           document.getElementById("cards-container").innerHTML = htmlRecipeCards;
           var allButtons = document.querySelectorAll('.recipe-card');
           console.log("Found", allButtons.length);
-    
+
     for (var i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener('click', function() {
+      //need to trigger the modal to show
+      $('#ex1').show(); 
+      //Display the content in the body of the modal
       console.log(this.getAttribute("data-id"));
       });
     }
@@ -49,66 +52,6 @@ var searchRecipies = function(recipe) {
     .catch(function(error) {
       alert('Unable to connect to Spoonacular');
     });
-};
-
-// Get the modal
-var modal = document.getElementById("imgModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("imgBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-  
-//display recipies on cards formatted in the HTML
-  var recipeResults = function(results) { 
-    var htmlCards = "";
-    for (var i = 0; i < results.length; i++ ) {
-    htmlCards += `<div class="cell small-3 recipe-card" data-id="${results[i].id}"><div class="card">
-    <button id="imgBtn">click<img src="${results[i].image}"></button>
-    <div class="card-section" id="imgModal" class="modal">
-      <p>${results[i].title}</p>
-    </div>
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p></p>
-      </div>
-      </div>
-  </div></div>`
-    }
-    return htmlCards
- };
-
- //create function to display selected recipe information
- var selectedInfo = function(id) {
-   //format the spoonacular API url
-   var apiUrl2 = `https://api.spoonacular.com/recipes/644860/information?apiKey=${apiKey}`
-
-   //make a request to the url
-   fetch(apiUrl2).then(function(response) {
-    if (response.ok) {
-      response.json().then(function(data) {
-        console.log(data);
-      });
-    }
-  })
 };
 
  //create function to display selected recipe information
@@ -126,6 +69,21 @@ window.onclick = function(event) {
  })
 };
 
+//display recipies on cards formatted in the HTML
+  var recipeResults = function(results) { 
+    var htmlCards = "";
+    for (var i = 0; i < results.length; i++ ) {
+    htmlCards += `<div class="cell small-3 recipe-card" data-id="${results[i].id}"><div class="card">
+    <img src="${results[i].image}">
+    <div class="card-section">
+      <p>${results[i].title}</p>
+    </div>
+      <p></p>
+      </div> 
+  </div></div>`
+    }
+    return htmlCards
+ };
   
 userFormEl.addEventListener("submit", formSumbitHandler);
 selectedInfo();
@@ -137,16 +95,3 @@ selectedInfo();
   //readyInMinutes
   //sourceUrl
   //display this information in modals when user clicks on searched image
-
-    // var recipeResults = function(results) { 
-    //   var htmlCards = "";
-    //   for (var i = 0; i < results.length; i++ ) {
-    //   htmlCards += `<div class="cell small-3 recipe-card" data-id="${results[i].id}"><div class="card">
-    //   <img src="${results[i].image}">
-    //   <div class="card-section">
-    //     <p>${results[i].title}</p>
-    //   </div>
-    // </div></div>`
-    //   }
-    //   return htmlCards
-   
