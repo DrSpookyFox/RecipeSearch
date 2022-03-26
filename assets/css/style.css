@@ -18,24 +18,11 @@
     background: url('../images/food-image-1.jpg');
     background-size:cover;
   }
-  
-  .bg-img { 
-    /* The image used */
-    /* background-image: src = "/assets/image/kitchen.jpg"; */
-  
-    /* Full height */
-    /* height: 100%;  */
-  
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-  } 
 
   header {
     display: flex;
     justify-content: center;
-    border: 2px black solid;
+    border: 2px whitesmoke solid;
     border-radius: 10px;
     background-color: var(--primary-color);
     /* background-image: radial-gradient(circle, #05537b, darkgrey); */
@@ -77,12 +64,17 @@
 #recipeSearch {
   border-radius: 20px;
 }
-  .card-search button {
+
+.card-search button {
     background-color: var(--primary-color);
     color: whitesmoke;
     border-radius: 20px;
+    cursor: pointer;
   }
 
+/* button:hover {
+  background: lightsteelblue;
+} */
 
 /* MEDIA QUERY FOR Mobile phones and smaller */
 @media screen and (max-width: 575px) {
