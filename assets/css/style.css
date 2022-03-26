@@ -1,12 +1,38 @@
-body, html {
+:root {
+  --primary-color: #05537b;
+  --secondary-color: rgb(153, 214, 169);
+  --tertiary-color: rgb(39, 37, 37);
+}
+
+/* @import 'foundation';
+@include foundation-everything; */
+
+ html {
     height: 100%;
+    /* background-image: url('../images/kitchen.jpg');   */
+    /* background: url('../images/kitchen.jpg') ; */
+    /* background-size: cover; */
+
+  }
+  .background {
+    background: url('../images/food-image-1.jpg');
+    background-size:cover;
   }
 
   header {
     display: flex;
     justify-content: center;
-    border: 2px black solid;
-    background-color: whitesmoke;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    /* background-image: radial-gradient(circle, #05537b, darkgrey); */
+
+  }
+
+  header h1 {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    color: whitesmoke;
   }
 
   .menu {
@@ -21,13 +47,44 @@ body, html {
     padding: 25px;
   }
 
-  .card {
-    display: flex;
-    justify-content: center;
+  .hero-cta h4{
+    color: rgb(88, 80, 80);
+
+  }
+  .card-search {
+    /* justify-content: center; */
     padding: 25px;
     text-align: center;
+    width: 50%;
+    background-color: var(--secondary-color);
+    margin-bottom: 40px;
+    margin-left: 25%;
+    border-radius: 30px;
+  }
+#recipeSearch {
+  border-radius: 20px;
+}
+
+.card-search button {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
   }
 
-  .btn {
-    background-color: blue;
+/* button:hover {
+  background: lightsteelblue;
+} */
+
+/* MEDIA QUERY FOR Mobile phones and smaller */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: center;
+    position: relative;
   }
+
+  menu {
+    text-align: center;
+    font-size: 25px;
+  }
+}

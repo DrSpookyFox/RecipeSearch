@@ -35,9 +35,12 @@ var searchRecipies = function(recipe) {
           document.getElementById("cards-container").innerHTML = htmlRecipeCards;
           var allButtons = document.querySelectorAll('.recipe-card');
           console.log("Found", allButtons.length);
-    
+
     for (var i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener('click', function() {
+      //need to trigger the modal to show
+      $('#ex1').show(); 
+      //Display the content in the body of the modal
       console.log(this.getAttribute("data-id"));
       });
     }
@@ -50,7 +53,22 @@ var searchRecipies = function(recipe) {
       alert('Unable to connect to Spoonacular');
     });
 };
-  
+
+ //create function to display selected recipe information
+ var selectedInfo = function(id) {
+  //format the spoonacular API url
+  var apiUrl2 = `https://api.spoonacular.com/recipes/644860/information?apiKey=${apiKey}`
+
+  //make a request to the url
+  fetch(apiUrl2).then(function(response) {
+   if (response.ok) {
+     response.json().then(function(data) {
+       console.log(data);
+     });
+   }
+ })
+};
+
 //display recipies on cards formatted in the HTML
   var recipeResults = function(results) { 
     var htmlCards = "";
@@ -60,11 +78,20 @@ var searchRecipies = function(recipe) {
     <div class="card-section">
       <p>${results[i].title}</p>
     </div>
+      <p></p>
+      </div> 
   </div></div>`
     }
     return htmlCards
  };
-
-    userFormEl.addEventListener("submit", formSumbitHandler);
-    
   
+userFormEl.addEventListener("submit", formSumbitHandler);
+selectedInfo();
+
+//with hard coded id we are able to console.log recipe information by id number. We need to isolate the following 
+  //Object:
+  //summary
+  //servings
+  //readyInMinutes
+  //sourceUrl
+  //display this information in modals when user clicks on searched image
