@@ -52,7 +52,7 @@ body, html {
     color: rgb(88, 80, 80);
 
   }
-  .card1 {
+  .card-search {
     /* justify-content: center; */
     padding: 25px;
     text-align: center;
@@ -62,7 +62,7 @@ body, html {
     margin-left: 25%;
   }
 
-  .card1 button {
+  .card-search button {
     background-color: var(--primary-color);
     color: whitesmoke;
   }

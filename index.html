@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +26,18 @@
         </div>
     </section>
     
-  <main>
-      <div class="card1">
+    <main>
+      <!-- <div class="grid-container">
+      <div class="card";>
+        <h4 class="columns medium-6 large-4 text-uppercase">Search For Your Next Meal</h4>
+        <form id="search-form" class="card-body">
+          <label class="form-label" for="recipeSearch">Please enter a recipe name, ingredient or diet type</label>
+          <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
+          <button type="search" class="btn" id="search-btn">Search</button>
+        </form>
+      </div>
+      </div> -->
+      <div class="card-search">
         <h4>Search For Your Next Meal</h4>
         <!-- medium-6 large-4 text-uppercase -->
         <form id="search-form" class="card-body">
@@ -38,132 +46,15 @@
           <button type="search" class="btn">Search</button>
         </form>
       </div>
-
-      <!--Search results desplayed here -->
-      <div class="grid-container">
-        <div class="grid-x grid-margin-x small-up-3 medium-up-4">
-
-          <div class="cell">
-            <div class="card">
-              <!-- <img src="assets/img/generic/rectangle-1.jpg"> -->
-              <img class="image">
-              <div class="card-section">
-                <p>This is a simple card with an image.</p>
-              </div>
-            </div>
+        <!--Search results desplayed here -->
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x" id="cards-container">
           </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="card">
-              <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <p>This is a simple card with an image.</p>
-                </div>
-            </div>
-          </div>
-
-
-
         </div>
-      </div>
 
       <div>
         <h4>About Us</h4>
       </div>
-      
-              
-  
-
     </main>
   
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -175,4 +66,3 @@
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>   
 </body>
 </html>
-
