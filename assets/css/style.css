@@ -1,39 +1,38 @@
 :root {
   --primary-color: #05537b;
-  --secondary-color: rgb(236, 232, 232);
+  --secondary-color: rgb(153, 214, 169);
   --tertiary-color: rgb(39, 37, 37);
 }
 
 /* @import 'foundation';
 @include foundation-everything; */
 
-body, html {
+ html {
     height: 100%;
+    /* background-image: url('../images/kitchen.jpg');   */
+    /* background: url('../images/kitchen.jpg') ; */
+    /* background-size: cover; */
+
   }
-  
-  .bg-img { 
-    /* The image used */
-    background-image: src = "/assets/image/kitchen.jpg";
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .background {
+    background: url('../images/food-image-1.jpg');
+    background-size:cover;
   }
 
   header {
     display: flex;
     justify-content: center;
-    border: 2px black solid;
-    /* background-color: whitesmoke; */
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
     background-color: var(--primary-color);
     /* background-image: radial-gradient(circle, #05537b, darkgrey); */
-    color: whitesmoke;
+
+  }
+
+  header h1 {
+    font-family: 'Tangerine', cursive;
     font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
   }
 
   .menu {
@@ -58,14 +57,34 @@ body, html {
     text-align: center;
     width: 50%;
     background-color: var(--secondary-color);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     margin-left: 25%;
+    border-radius: 30px;
   }
+#recipeSearch {
+  border-radius: 20px;
+}
 
-  .card-search button {
+.card-search button {
     background-color: var(--primary-color);
     color: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
   }
 
-/* TODO:
-Make the page responsive */
+/* button:hover {
+  background: lightsteelblue;
+} */
+
+/* MEDIA QUERY FOR Mobile phones and smaller */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: center;
+    position: relative;
+  }
+
+  menu {
+    text-align: center;
+    font-size: 25px;
+  }
+}
