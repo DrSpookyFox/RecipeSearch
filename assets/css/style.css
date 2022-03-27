@@ -21,7 +21,7 @@
 
   header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border: 2px whitesmoke solid;
     border-radius: 10px;
     background-color: var(--primary-color);
@@ -31,13 +31,25 @@
 
   header h1 {
     font-family: 'Tangerine', cursive;
+    font-size: 40px;
     font-weight: bold;
-    color: whitesmoke;
+    color: white;
+    margin-left: 10px;
+    /* justify-content: left; */
   }
 
-  .menu {
-    display: flex;
-    justify-content: center;
+
+  header a:hover {
+    color: whitesmoke;
+    text-shadow:none;
+  }
+
+  header a {
+    text-shadow:none;
+    margin: 20px;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 9);
+    font-family: 'Open Sans', sans-serif;
   }
 
   .hero {
@@ -52,7 +64,6 @@
 
   }
   .card-search {
-    /* justify-content: center; */
     padding: 25px;
     text-align: center;
     width: 50%;
