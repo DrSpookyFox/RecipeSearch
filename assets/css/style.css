@@ -49,7 +49,7 @@
     padding: 25px;
   }
 
-  .hero-cta h4, p {
+  .hero-cta h4, .hero-cta p {
     background-color: var(--primary-color);
     color: whitesmoke;
     border: 2px whitesmoke solid;
