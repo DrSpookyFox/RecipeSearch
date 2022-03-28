@@ -29,20 +29,16 @@ var searchRecipies = function(recipe) {
     fetch(apiUrl).then(function(response) {
        // request was successful
        if (response.ok) {
-        // console.log(response);
         response.json().then(function(data) {
-          // console.log(data.results);
           var htmlRecipeCards = recipeResults(data.results);
           document.getElementById("cards-container").innerHTML = htmlRecipeCards;
           var allButtons = document.querySelectorAll('.recipe-card');
-          console.log("Found", allButtons.length);
 
     for (var i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener('click', function() {
       //need to trigger the modal to show
       $('#ex1').show(); 
       //Display the content in the body of the modal
-      console.log(this.getAttribute("data-id"));
       });
     }
         });
@@ -68,7 +64,7 @@ var searchRecipies = function(recipe) {
        for (var i = 0; i < data.extendedIngredients.length; i++ ) {
         ingredients += (data.extendedIngredients[i].name  + ", ");
        }
-       console.log(ingredients);
+      //  console.log(ingredients);
       var htmlText = `<p> ${data.title} </p> 
       <p> Ingredients: </p>
       <p> ${ingredients} </p> 
@@ -77,8 +73,6 @@ var searchRecipies = function(recipe) {
       <p> Source:  <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
-
-       console.log(data);
      });
    }
  })
@@ -89,7 +83,7 @@ var searchRecipies = function(recipe) {
     var htmlCards = "";
     for (var i = 0; i < results.length; i++ ) {
     htmlCards += `<div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}"><div class="card">
-    <img src="${results[i].image}">
+    <img src="${results[i].image}"<p><a href="#food-modal" rel="modal:open">Click For Details</a></p>
     <div class="card-section">
       <p>${results[i].title}</p>
     </div>
@@ -101,3 +95,8 @@ var searchRecipies = function(recipe) {
  };
   
 userFormEl.addEventListener("submit", formSumbitHandler);
+
+//we have a modal showing up after the grid-container / cards-container.
+//when we click an invididaul card they show up in sequence in a single modal, 
+//the formatting an information we want to display is all correct.
+//How do we get a new modal to display each time we click a card without other card info appearing  

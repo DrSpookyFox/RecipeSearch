@@ -54,10 +54,11 @@
   }
 
   .hero-cta h4, .hero-cta p {
-    background-color: var(--primary-color);
-    color: whitesmoke;
+    background-color: var(--secondary-color);
+    color: black;
     border: 2px whitesmoke solid;
     border-radius: 10px;
+
   }
   .card-search {
     padding: 25px;
