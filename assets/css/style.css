@@ -4,15 +4,8 @@
   --tertiary-color: rgb(39, 37, 37);
 }
 
-/* @import 'foundation';
-@include foundation-everything; */
-
  html {
     height: 100%;
-    /* background-image: url('../images/kitchen.jpg');   */
-    /* background: url('../images/kitchen.jpg') ; */
-    /* background-size: cover; */
-
   }
   .background {
     background: url('../images/food-image-1.jpg');
@@ -21,23 +14,32 @@
 
   header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border: 2px whitesmoke solid;
     border-radius: 10px;
     background-color: var(--primary-color);
-    /* background-image: radial-gradient(circle, #05537b, darkgrey); */
-
   }
 
   header h1 {
     font-family: 'Tangerine', cursive;
+    font-size: 40px;
     font-weight: bold;
-    color: whitesmoke;
+    color: white;
+    margin-left: 10px;
   }
 
-  .menu {
-    display: flex;
-    justify-content: center;
+
+  header a:hover {
+    color: whitesmoke;
+    text-shadow:none;
+  }
+
+  header a {
+    text-shadow:none;
+    margin: 20px;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 9);
+    font-family: 'Open Sans', sans-serif;
   }
 
   .hero {
@@ -52,7 +54,6 @@
 
   }
   .card-search {
-    /* justify-content: center; */
     padding: 25px;
     text-align: center;
     width: 50%;
@@ -71,10 +72,6 @@
     border-radius: 20px;
     cursor: pointer;
   }
-
-/* button:hover {
-  background: lightsteelblue;
-} */
 
 /* MEDIA QUERY FOR Mobile phones and smaller */
 @media screen and (max-width: 575px) {

@@ -2,6 +2,7 @@ var userFormEl = document.querySelector("#search-form");
 var nameInputEl = document.querySelector("#recipeSearch");
 
 //Global Variables
+
 var apiKey = "76fc45feadbe46379e4c23a107066a2f";
 
 var formSumbitHandler = function(event) {
@@ -10,7 +11,7 @@ var formSumbitHandler = function(event) {
 
     //get value from input element
     var recipeSearch = nameInputEl.value.trim();
-
+    //check to see if user input matches search criteria
     if (recipeSearch) {
       searchRecipies(recipeSearch);
       nameInputEl.value = "";
@@ -19,7 +20,7 @@ var formSumbitHandler = function(event) {
     }
     }
 
-//function calls spooacular API to get recipe info
+//function calls spooacular API to get recipe title, img and id
 var searchRecipies = function(recipe) {
     // format the spoonacular api url
     var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${recipe}&number=12`
@@ -57,12 +58,26 @@ var searchRecipies = function(recipe) {
  //create function to display selected recipe information
  var selectedInfo = function(id) {
   //format the spoonacular API url
-  var apiUrl2 = `https://api.spoonacular.com/recipes/644860/information?apiKey=${apiKey}`
+  var apiUrl2 = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
 
   //make a request to the url
   fetch(apiUrl2).then(function(response) {
    if (response.ok) {
      response.json().then(function(data) {
+       var ingredients = "";
+       for (var i = 0; i < data.extendedIngredients.length; i++ ) {
+        ingredients += (data.extendedIngredients[i].name  + ", ");
+       }
+       console.log(ingredients);
+      var htmlText = `<p> ${data.title} </p> 
+      <p> Ingredients: </p>
+      <p> ${ingredients} </p> 
+      <p> Instructions: </p>
+      <p> ${data.instructions}
+      <p> Source:  <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
+      
+      document.querySelector("#food-modal").innerHTML += htmlText;
+
        console.log(data);
      });
    }
@@ -73,7 +88,7 @@ var searchRecipies = function(recipe) {
   var recipeResults = function(results) { 
     var htmlCards = "";
     for (var i = 0; i < results.length; i++ ) {
-    htmlCards += `<div class="cell small-3 recipe-card" data-id="${results[i].id}"><div class="card">
+    htmlCards += `<div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}"><div class="card">
     <img src="${results[i].image}">
     <div class="card-section">
       <p>${results[i].title}</p>
@@ -86,12 +101,3 @@ var searchRecipies = function(recipe) {
  };
   
 userFormEl.addEventListener("submit", formSumbitHandler);
-selectedInfo();
-
-//with hard coded id we are able to console.log recipe information by id number. We need to isolate the following 
-  //Object:
-  //summary
-  //servings
-  //readyInMinutes
-  //sourceUrl
-  //display this information in modals when user clicks on searched image
