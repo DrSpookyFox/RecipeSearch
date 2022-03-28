@@ -73,8 +73,6 @@ var searchRecipies = function(recipe) {
       <p> Source:  <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
-
-      //  console.log(data);
      });
    }
  })
@@ -85,7 +83,7 @@ var searchRecipies = function(recipe) {
     var htmlCards = "";
     for (var i = 0; i < results.length; i++ ) {
     htmlCards += `<div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}"><div class="card">
-    <img src="${results[i].image}">
+    <img src="${results[i].image}"<p><a href="#food-modal" rel="modal:open">Click For Details</a></p>
     <div class="card-section">
       <p>${results[i].title}</p>
     </div>
