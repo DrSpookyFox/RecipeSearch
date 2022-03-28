@@ -9,7 +9,11 @@
   }
   .background {
     background: url('../images/Cooking-Recipe.PNG');
-    /* background-size:cover; */
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
 
   header {
