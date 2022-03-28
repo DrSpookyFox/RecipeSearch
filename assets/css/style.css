@@ -8,8 +8,8 @@
     height: 100%;
   }
   .background {
-    background: url('../images/food-image-1.jpg');
-    background-size:cover;
+    background: url('../images/Cooking-Recipe.PNG');
+    /* background-size:cover; */
   }
 
   header {
@@ -49,9 +49,11 @@
     padding: 25px;
   }
 
-  .hero-cta h4{
-    color: rgb(88, 80, 80);
-
+  .hero-cta h4, p {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
   }
   .card-search {
     padding: 25px;
@@ -73,9 +75,30 @@
     cursor: pointer;
   }
 
+  footer {
+    display: flex;
+    justify-content: space-between;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
+
+  footer h6 {
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    margin-left: 10px;
+  }
+  
 /* MEDIA QUERY FOR Mobile phones and smaller */
 @media screen and (max-width: 575px) {
   header {
+    justify-content: center;
+    position: relative;
+  }
+
+  footer {
     justify-content: center;
     position: relative;
   }
