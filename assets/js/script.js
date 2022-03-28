@@ -29,18 +29,15 @@ var searchRecipies = function(recipe) {
     fetch(apiUrl).then(function(response) {
        // request was successful
        if (response.ok) {
-        // console.log(response);
         response.json().then(function(data) {
-          // console.log(data.results);
           var htmlRecipeCards = recipeResults(data.results);
           document.getElementById("cards-container").innerHTML = htmlRecipeCards;
           var allButtons = document.querySelectorAll('.recipe-card');
-          console.log("Found", allButtons.length);
 
     for (var i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener('click', function() {
       //need to trigger the modal to show
-      $('#ex1').show(); 
+      $('#food-modal').show(); 
       //Display the content in the body of the modal
       console.log(this.getAttribute("data-id"));
       });
@@ -68,16 +65,13 @@ var searchRecipies = function(recipe) {
        for (var i = 0; i < data.extendedIngredients.length; i++ ) {
         ingredients += (data.extendedIngredients[i].name  + ", ");
        }
-       console.log(ingredients);
-      var htmlText = `<p> ${data.title} </p> 
-      <p> Ingredients: </p>
+      //  console.log(ingredients);
+      var htmlText = `<p> <strong> ${data.title} </strong> <font color="blue"></p> 
+      <p> <strong> Ingredients: </strong> <font color="blue"> </p>
       <p> ${ingredients} </p> 
-      <p> Instructions: </p>
+      <p> <strong> Instructions:  </strong> <font color="blue"> </p>
       <p> ${data.instructions}
-      <p> Source:  <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>
-      `;
-      
-    
+      <p> <strong> Source: </strong> <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
 
@@ -87,15 +81,17 @@ var searchRecipies = function(recipe) {
  })
 };
 
+
 //display recipies on cards formatted in the HTML
   var recipeResults = function(results) { 
     var htmlCards = "";
     for (var i = 0; i < results.length; i++ ) {
     htmlCards += `<div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}"><div class="card">
-    <img src="${results[i].image}">
+  
     <div class="card-section">
+      <img src="${results[i].image}"<p><a href="#food-modal" rel="modal:open">Click For Details</a></p>
       <p>${results[i].title}</p>
-    </div>
+      </div>
       <p></p>
       </div> 
   </div></div>`
