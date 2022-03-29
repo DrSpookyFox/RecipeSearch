@@ -22,6 +22,8 @@
   header {
     display: flex;
     justify-content: space-between;
+    /* border: 2px whitesmoke solid; */
+    /* border-radius: 10px; */
     background-color: var(--primary-color);
     position:sticky;
     position: -webkit-sticky;
