@@ -1,177 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Search</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
 </head>
-
 <body>
-    <header>
-        <h1>Recipe Search</h1>
-    </header>
-
-    <ul class="menu">
-        <li><a href="#search-for-a-meal">Search For a Meal</a></li>
-        <li><a href="#about-us">About Us</a></li>
-    </ul>
-
+    <div class= "background">
+ <header>
+    <h1>Recipe Search</h1>
+    <a href="https://github.com/DrSpookyFox/RecipeSearch">About Us</a>  
+ </header>
+  
     <section class="hero">
         <div class="hero-cta">
-            <h4>Find Your Next Meal With Search Recipies</h4>
-            <p>
-                Can't make up your mind on what to eat next? Let us help you find it! Search for thousands of recipies
-                with detailed ingredient lists, photos and preperation instructions!
-            </p>
+          <h4>Can't make up your mind on what to eat next?</h4>
+          <p>
+            Let us help you find it! Search for thousands of recipies with detailed ingredient lists, photos and preperation instructions!
+          </p>
         </div>
     </section>
+    
     <main>
-        <div class="grid-container">
-            <div class="card" style="width: 400px" ;>
-                <h4 class="columns medium-6 large-4 text-uppercase">Search For Your Next Meal</h4>
-                <form id="search-form" class="card-body">
-                    <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet
-                        type</label>
-                    <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
-                    <button type="search" class="btn">Search</button>
-                </form>
-            </div>
-        </div>
-
+      <div class="card-search">
+        <h4>Search For Your Next Meal</h4>
+        <!-- medium-6 large-4 text-uppercase -->
+        <form id="search-form" class="card-body">
+          <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
+          <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
+          <button type="search" class="btn">Search</button>
+        </form>
+      </div>
         <!--Search results desplayed here -->
         <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-3">
-                    <div class="card">
-                        <img src="assets/img/generic/rectangle-1.jpg">
-                        <div class="card-section">
-                            <p>This is a simple card with an image.</p>
-                        </div>
-                    </div>
-                </div>
+          <!-- Modal HTML embedded directly into document -->
+            <div id="food-modal" class="modal">
+              <p></p>
+              <a href="#" rel="modal:close">Close</a>
             </div>
+          <!-- Link to open the modal -->
+         <div class="grid-x grid-margin-x" id="cards-container">
+          </div>
         </div>
-
-        <div>
-            <h4>About Us</h4>
-        </div>
-
-
-
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
-        crossorigin="anonymous">
+  <footer>
+    <h6>
+      Made by The Ohio State University Coding Bootcamp Group #6
+      <br>
+      &copy; March 2022
+    </h6>
+  </footer>
+      
+          <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-float.min.css" crossorigin="anonymous">
 
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
-        crossorigin="anonymous"></script>
-</body>
+      <!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-prototype.min.css" crossorigin="anonymous">
+
+      <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-rtl.min.css" crossorigin="anonymous">
+      <!-- jQuery Modal -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      <script src="./assets/js/script.js"></script> 
+
+    </div>
+  </body>
 
 </html>

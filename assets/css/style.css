@@ -1,46 +1,115 @@
-body, html {
-  height: 100%;
+:root {
+  --primary-color: #05537b;
+  --secondary-color: rgb(153, 214, 169);
+  --tertiary-color: rgb(39, 37, 37);
 }
 
-.bg-img { 
-  /* The image used */
-  background-image: src = "/assets/image/kitchen.jpg";
+ html {
+    height: 100%;
+  }
+  .background {
+    background: url('../images/Cooking-Recipe.PNG');
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-  /* Full height */
-  height: 100%; 
+  header {
+    display: flex;
+    justify-content: space-between;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  header h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+  }
+
+
+  header a:hover {
+    color: whitesmoke;
+    text-shadow:none;
+  }
+
+  header a {
+    text-shadow:none;
+    margin: 20px;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 9);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .hero-cta h4, .hero-cta p {
+    background-color: var(--secondary-color);
+    color: black;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+
+  }
+  .card-search {
+    padding: 25px;
+    text-align: center;
+    width: 50%;
+    background-color: var(--secondary-color);
+    margin-bottom: 40px;
+    margin-left: 25%;
+    border-radius: 30px;
+  }
+#recipeSearch {
+  border-radius: 20px;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  border: 2px black solid;
-  background-color: whitesmoke;
-}
+.card-search button {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+  }
 
-.menu {
-  display: flex;
-  justify-content: center;
-}
+  footer {
+    display: flex;
+    justify-content: space-between;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+  }
 
-.hero {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 25px;
-}
+  footer h6 {
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    margin-left: 10px;
+  }
+  
+/* MEDIA QUERY FOR Mobile phones and smaller */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: center;
+    position: relative;
+  }
 
-.card {
-  display: flex;
-  justify-content: center;
-  padding: 25px;
-  text-align: center;
-}
+  footer {
+    justify-content: center;
+    position: relative;
+  }
 
-.btn {
-  background-color: blue;
+  menu {
+    text-align: center;
+    font-size: 25px;
+  }
 }
