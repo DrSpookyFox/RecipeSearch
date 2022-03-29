@@ -3,7 +3,8 @@ var nameInputEl = document.querySelector("#recipeSearch");
 
 //Global Variables
 // var apiKey = "76fc45feadbe46379e4c23a107066a2f";
-var apiKey  = "637030d8b75642fb9ad9b713d9db5597";
+// var apiKey  = "5e0faea935a644eba24879e173f779ca";
+var apiKey = "8bc06a96d24f4868b64f825832fdfb9c";
 
 var formSumbitHandler = function(event) {
     //Prevents browser from sending the form's input data to a URL
@@ -102,7 +103,7 @@ var searchRecipies = function(recipe) {
  };
   
 userFormEl.addEventListener("submit", formSumbitHandler);
-// selectedInfo();
+
 
 //with hard coded id we are able to console.log recipe information by id number. We need to isolate the following 
   //Object:

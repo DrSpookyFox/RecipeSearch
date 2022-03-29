@@ -1,31 +1,30 @@
 :root {
   --primary-color: #05537b;
-  --secondary-color: rgb(153, 214, 169);
+  --secondary-color: rgb(170, 216, 182);
   --tertiary-color: rgb(39, 37, 37);
 }
 
-/* @import 'foundation';
-@include foundation-everything; */
-
  html {
     height: 100%;
-    /* background-image: url('../images/kitchen.jpg');   */
-    /* background: url('../images/kitchen.jpg') ; */
-    /* background-size: cover; */
+}
 
-  }
+  /* set styles for the background image */
   .background {
-    background: url('../images/food-image-1.jpg');
-    background-size:cover;
+    background: url('../images/Cooking-Recipe.PNG');
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
 
+  /* set styles for the header */
   header {
     display: flex;
     justify-content: space-between;
     border: 2px whitesmoke solid;
     border-radius: 10px;
     background-color: var(--primary-color);
-    /* background-image: radial-gradient(circle, #05537b, darkgrey); */
 
   }
 
@@ -35,9 +34,8 @@
     font-weight: bold;
     color: white;
     margin-left: 10px;
-    /* justify-content: left; */
+  
   }
-
 
   header a:hover {
     color: whitesmoke;
@@ -56,13 +54,16 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 25px;
+    padding: 15px;
+    margin-bottom: 50px;
   }
 
   .hero-cta h4{
-    color: rgb(88, 80, 80);
-
+    color: rgb(82, 82, 87);
+    font-size: 24px;
   }
+
+  /*styles for the search box */
   .card-search {
     padding: 25px;
     text-align: center;
@@ -72,24 +73,52 @@
     margin-left: 25%;
     border-radius: 30px;
   }
-#recipeSearch {
+
+  #recipeSearch {
   border-radius: 20px;
 }
 
-.card-search button, .card-search button:active {
+input.form-input {
+  color:darkgray;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.card-search button {
     background-color: var(--primary-color);
     color: whitesmoke;
     border-radius: 20px;
     cursor: pointer;
   }
-
+/* styles for the result cards */
 .food-title {
   padding-top: 10px;
 }
 
-/* button:hover {
-  background: lightsteelblue;
-} */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px whitesmoke solid;
+  background-color: var(--primary-color);
+  margin-top: 200px;
+  color: whitesmoke;
+}
+
+footer h6 {
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+footer div {
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: right;
+    margin-right: 10px;
+}
 
 /* MEDIA QUERY FOR Mobile phones and smaller */
 @media screen and (max-width: 575px) {
