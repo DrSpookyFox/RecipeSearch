@@ -1,12 +1,14 @@
 :root {
   --primary-color: #05537b;
-  --secondary-color: rgb(153, 214, 169);
+  --secondary-color: rgb(170, 216, 182);
   --tertiary-color: rgb(39, 37, 37);
 }
 
  html {
     height: 100%;
-  }
+}
+
+  /* set styles for the background image */
   .background {
     background: url('../images/Cooking-Recipe.PNG');
     height: 550px;
@@ -16,12 +18,15 @@
     position: relative;
   }
 
+  /* set styles for the header */
   header {
     display: flex;
     justify-content: space-between;
-    border: 2px whitesmoke solid;
-    border-radius: 10px;
     background-color: var(--primary-color);
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
   }
 
   header h1 {
@@ -30,8 +35,8 @@
     font-weight: bold;
     color: white;
     margin-left: 10px;
+  
   }
-
 
   header a:hover {
     color: whitesmoke;
@@ -50,16 +55,16 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 25px;
+    padding: 15px;
+    margin-bottom: 50px;
   }
 
-  .hero-cta h4, .hero-cta p {
-    background-color: var(--secondary-color);
-    color: black;
-    border: 2px whitesmoke solid;
-    border-radius: 10px;
-
+  .hero-cta h4{
+    color: rgb(82, 82, 87);
+    font-size: 24px;
   }
+
+  /*styles for the search box */
   .card-search {
     padding: 25px;
     text-align: center;
@@ -69,8 +74,15 @@
     margin-left: 25%;
     border-radius: 30px;
   }
-#recipeSearch {
+
+  #recipeSearch {
   border-radius: 20px;
+}
+
+input.form-input {
+  color:darkgray;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .card-search button {
@@ -79,31 +91,80 @@
     border-radius: 20px;
     cursor: pointer;
   }
+/* styles for the result cards */
+.food-title {
+  padding-top: 10px;
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 14px;
+}
 
-  footer {
-    display: flex;
-    justify-content: space-between;
-    border: 2px whitesmoke solid;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-  }
+.food-title:hover {
+  text-decoration: underline;
+}
 
-  footer h6 {
+.modal {
+  margin-top: 70px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.closeBtn {
+  margin: 10px;
+}
+
+#btnClose {
+  margin-top: 20px;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: blue;
+}
+
+.card-detail {
+  font-weight: bold;
+  color: blue;
+}
+
+.sourceURL:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px whitesmoke solid;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h6 {
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+footer div {
     font-family: 'Tangerine', cursive;
     font-size: 25px;
     font-weight: lighter;
-    color: white;
-    margin-left: 10px;
-  }
-  
+    text-align: right;
+    margin-right: 10px;
+}
+
 /* MEDIA QUERY FOR Mobile phones and smaller */
 @media screen and (max-width: 575px) {
   header {
-    justify-content: center;
-    position: relative;
-  }
-
-  footer {
     justify-content: center;
     position: relative;
   }
@@ -112,3 +173,4 @@
     text-align: center;
     font-size: 25px;
   }
+}

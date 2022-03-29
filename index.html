@@ -12,54 +12,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
-</head>
-<body>
-    <div class= "background">
- <header>
-    <h1>Recipe Search</h1>
-    <a href="https://github.com/DrSpookyFox/RecipeSearch">About Us</a>  
- </header>
+  </head>
+  <body>
+  <div class= "background">
+    <header>
+      <h1>Recipe Search</h1>
+      <a href="https://github.com/DrSpookyFox/RecipeSearch" target="_blank">About Us</a>  
+    </header>
   
-    <section class="hero">
-        <div class="hero-cta">
-          <h4>Can't make up your mind on what to eat next?</h4>
-          <p>
-            Let us help you find it! Search for thousands of recipies with detailed ingredient lists, photos and preperation instructions!
-          </p>
+      <section class="hero">
+          <div class="hero-cta">
+            <h4>Can't make up your mind on what to eat next?</h4>
+            <p>
+              Let us help you find it! Search for thousands of recipies with detailed ingredient lists, photos and preperation instructions!
+            </p>
+          </div>
+      </section>
+      
+      <main>
+        <div class="card-search">
+          <h4>Find Your Next Meal</h4>
+          <form id="search-form" class="card-body">
+            <!-- <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label> -->
+            <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" placeholder="Please enter a recipe name, ingredient or diet type" />
+            <button type="search" class="btn" id="searchBtn">Search</button>
+          </form>
         </div>
-    </section>
-    
-    <main>
-      <div class="card-search">
-        <h4>Search For Your Next Meal</h4>
-        <!-- medium-6 large-4 text-uppercase -->
-        <form id="search-form" class="card-body">
-          <label class="form-label" for="recipe-search">Please enter a recipe name, ingredient or diet type</label>
-          <input name="recipe" id="recipeSearch" type="text" autofocus="true" class="form-input" />
-          <button type="search" class="btn">Search</button>
-        </form>
-      </div>
+  
         <!--Search results desplayed here -->
         <div class="grid-container">
-          <!-- Modal HTML embedded directly into document -->
-            <div id="food-modal" class="modal">
-              <p></p>
-              <a href="#" rel="modal:close">Close</a>
-            </div>
-          <!-- Link to open the modal -->
-         <div class="grid-x grid-margin-x" id="cards-container">
+          <div class="grid-x grid-margin-x" id="cards-container">
           </div>
         </div>
-
-    </main>
-
-  <footer>
-    <h6>
-      Made by The Ohio State University Coding Bootcamp Group #6
-      <br>
-      &copy; March 2022
-    </h6>
-  </footer>
+         
+        <!-- Modal HTML embedded directly into document -->
+        <div id="food-modal" class="modal">
+          <div id="htmlText2">
+          </div>
+        </div>
+  
+      </main>
+  </div>
+  
+    <footer>
+      <h6>
+        Made by The Ohio State University Coding Bootcamp Group #6
+      </h6>
+      <div>
+          &copy; March 2022
+      </div>
+    </footer>
       
           <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation-float.min.css" crossorigin="anonymous">
