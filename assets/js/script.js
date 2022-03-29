@@ -65,12 +65,12 @@ var searchRecipies = function(recipe) {
         ingredients += (data.extendedIngredients[i].name  + ", ");
        }
       //  console.log(ingredients);
-      var htmlText = `<p> ${data.title} </p> 
-      <p> Ingredients: </p>
+      var htmlText = `<p> <strong> ${data.title} </strong> <font color="blue"></p> 
+      <p> <strong> Ingredients: </strong> <font color="blue"> </p>
       <p> ${ingredients} </p> 
-      <p> Instructions: </p>
+      <p> <strong> Instructions:  </strong> <font color="blue"> </p>
       <p> ${data.instructions}
-      <p> Source:  <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
+      <p> <strong> Source: </strong> <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
      });
