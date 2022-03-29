@@ -10,8 +10,8 @@
 
   /* set styles for the background image */
   .background {
-    background: url('../images/Cooking-Recipe.PNG');
-    height: 550px;
+    background: url('../images/Cooking-Recipe.png');
+    height: 650px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
