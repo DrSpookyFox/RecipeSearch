@@ -102,6 +102,18 @@ input.form-input {
   text-decoration: underline;
 }
 
+.card-title {
+  font-weight: bold;
+}
+
+.card-detail {
+  font-weight: bold;
+  color: blue;
+}
+
+.sourceURL:hover {
+  text-decoration: underline;
+}
 
 footer {
   display: flex;

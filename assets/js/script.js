@@ -70,12 +70,13 @@ var searchRecipies = function(recipe) {
       //  console.log(ingredients);
       document.querySelector("#htmlText2").remove();
 
-      var htmlText = ` <div id="htmlText2"> <p> <strong> ${data.title} </strong> <font color="blue"></p> 
-      <p> <strong> Ingredients: </strong> <font color="blue"> </p>
+      var htmlText = ` <div id="htmlText2"> 
+      <p class="card-title">${data.title}</p> 
+      <p class="card-detail">Ingredients:</p>
       <p> ${ingredients} </p> 
-      <p> <strong> Instructions:  </strong> <font color="blue"> </p>
+      <p class="card-detail">Instructions:</p>
       <p> ${data.instructions}
-      <p> <strong> Source: </strong> <a href="${data.sourceUrl}">${data.sourceUrl}</a></p> 
+      <p class="card-detail"> Source: <a class="sourceURL" href="${data.sourceUrl}">${data.sourceUrl}</a></p> 
       <a href="#" rel="modal:close">Close</a> </div>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
