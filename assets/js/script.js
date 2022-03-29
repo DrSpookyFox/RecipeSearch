@@ -47,7 +47,7 @@ var searchRecipies = function(recipe) {
     }
         });
       } else {
-        alert('Error: ' + response.statusText);
+        alert('Error: Unable to connect to Spoonacular' + response.statusText);
       }
     })
     .catch(function(error) {
@@ -65,19 +65,21 @@ var searchRecipies = function(recipe) {
      response.json().then(function(data) {
        var ingredients = "";
        for (var i = 0; i < data.extendedIngredients.length; i++ ) {
-        ingredients += (data.extendedIngredients[i].name  + ", ");
+        ingredients += (data.extendedIngredients[i].amount + " " + data.extendedIngredients[i].unit + " " + data.extendedIngredients[i].name  + ", ");
        }
       //  console.log(ingredients);
       document.querySelector("#htmlText2").remove();
 
       var htmlText = ` <div id="htmlText2"> 
       <p class="card-title">${data.title}</p> 
+      <p> ${data.summary}</p> 
       <p class="card-detail">Ingredients:</p>
       <p> ${ingredients} </p> 
       <p class="card-detail">Instructions:</p>
       <p> ${data.instructions}
       <p class="card-detail"> Source: <a class="sourceURL" href="${data.sourceUrl}">${data.sourceUrl}</a></p> 
-      <a href="#" rel="modal:close">Close</a> </div>`;
+      <div id=btnClose> <a class="closeBtn" href="#" rel="modal:close">Close</a> </div>
+      </div>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
 

@@ -22,10 +22,13 @@
   header {
     display: flex;
     justify-content: space-between;
-    border: 2px whitesmoke solid;
-    border-radius: 10px;
+    /* border: 2px whitesmoke solid; */
+    /* border-radius: 10px; */
     background-color: var(--primary-color);
-
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
   }
 
   header h1 {
@@ -102,8 +105,28 @@ input.form-input {
   text-decoration: underline;
 }
 
+.modal {
+  margin-top: 70px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.closeBtn {
+  margin: 10px;
+}
+
+#btnClose {
+  margin-top: 20px;
+}
 .card-title {
   font-weight: bold;
+  font-size: 24px;
+  color: blue;
 }
 
 .card-detail {
