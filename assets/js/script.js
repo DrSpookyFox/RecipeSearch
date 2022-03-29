@@ -51,12 +51,10 @@ var searchRecipies = function(recipe) {
       alert('Unable to connect to Spoonacular');
     });
 };
-
  //create function to display selected recipe information
  var selectedInfo = function(id) {
   //format the spoonacular API url
   var apiUrl2 = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
-
   //make a request to the url
   fetch(apiUrl2).then(function(response) {
    if (response.ok) {
@@ -66,12 +64,15 @@ var searchRecipies = function(recipe) {
         ingredients += (data.extendedIngredients[i].name  + ", ");
        }
       //  console.log(ingredients);
-      var htmlText = `<p> <strong> ${data.title} </strong> <font color="blue"></p> 
+      document.querySelector("#htmlText2").remove();
+
+      var htmlText = ` <div id="htmlText2"> <p> <strong> ${data.title} </strong> <font color="blue"></p> 
       <p> <strong> Ingredients: </strong> <font color="blue"> </p>
       <p> ${ingredients} </p> 
       <p> <strong> Instructions:  </strong> <font color="blue"> </p>
       <p> ${data.instructions}
-      <p> <strong> Source: </strong> <a href="${data.sourceUrl}">${data.sourceUrl}</a></p>`;
+      <p> <strong> Source: </strong> <a href="${data.sourceUrl}">${data.sourceUrl}</a></p> 
+      <a href="#" rel="modal:close">Close</a> </div>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;
 
@@ -86,15 +87,16 @@ var searchRecipies = function(recipe) {
   var recipeResults = function(results) { 
     var htmlCards = "";
     for (var i = 0; i < results.length; i++ ) {
-    htmlCards += `<div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}"><div class="card">
+    htmlCards += `
+  <div class="cell small-3 recipe-card" onclick="selectedInfo(${results[i].id})" data-id="${results[i].id}">
+    <div class="card">
   
-    <div class="card-section">
-      <img src="${results[i].image}"<p><a href="#food-modal" rel="modal:open">Click For Details</a></p>
-      <p>${results[i].title}</p>
+      <div class="card-section">
+      <a href="#food-modal" rel="modal:open"> <img src="${results[i].image}"> </a>
+      <a href="#food-modal" rel="modal:open"> <p class="food-title">${results[i].title}</p> </a>
       </div>
-      <p></p>
-      </div> 
-  </div></div>`
+    </div>
+  </div>`
     }
     return htmlCards
  };

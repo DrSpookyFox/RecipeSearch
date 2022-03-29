@@ -76,12 +76,16 @@
   border-radius: 20px;
 }
 
-.card-search button {
+.card-search button, .card-search button:active {
     background-color: var(--primary-color);
     color: whitesmoke;
     border-radius: 20px;
     cursor: pointer;
   }
+
+.food-title {
+  padding-top: 10px;
+}
 
 /* button:hover {
   background: lightsteelblue;
