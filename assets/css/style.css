@@ -93,6 +93,13 @@ input.form-input {
 /* styles for the result cards */
 .food-title {
   padding-top: 10px;
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.food-title:hover {
+  text-decoration: underline;
 }
 
 
@@ -101,8 +108,10 @@ footer {
   justify-content: space-between;
   border: 1px whitesmoke solid;
   background-color: var(--primary-color);
-  margin-top: 200px;
   color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer h6 {

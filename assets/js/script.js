@@ -16,8 +16,10 @@ var formSumbitHandler = function(event) {
     if (recipeSearch) {
       searchRecipies(recipeSearch);
       nameInputEl.value = "";
+      document.getElementById("searchBtn").style.background='#05537b';
     } else {
         alert("Invalid entry");
+      document.getElementById("searchBtn").style.background='#05537b';
     }
     }
 
@@ -37,7 +39,7 @@ var searchRecipies = function(recipe) {
 
     for (var i = 0; i < allButtons.length; i++) {
       allButtons[i].addEventListener('click', function() {
-      //need to trigger the modal to show
+      //trigger the modal to show
       $('#food-modal').show(); 
       //Display the content in the body of the modal
       console.log(this.getAttribute("data-id"));
@@ -52,6 +54,7 @@ var searchRecipies = function(recipe) {
       alert('Unable to connect to Spoonacular');
     });
 };
+
  //create function to display selected recipe information
  var selectedInfo = function(id) {
   //format the spoonacular API url
