@@ -3,15 +3,17 @@
 ## Our Goal
 The Recipe Search Website allows you to type in keywords and in return will desplay recipes that match the keywords used.  By clicking on one of the results, it tells you the ingrediants, stepts to make the recipe, and a link to the site with more specific information.
 
-[<img width="1592" alt="Screen Shot at 3/20/22" src="https://user-images.githubusercontent.com/98188411/160524266-ee297cdd-6b56-43c3-8509-72a97549d98c.JPG">]
+[<img width="1592" alt="Results Page" src="https://user-images.githubusercontent.com/98188411/160716934-d344f951-6abf-408c-b2f2-009b9000ffb7.JPG">]
+[<img width="1592" alt="Deatiled Recipe Information" src="https://user-images.githubusercontent.com/98188411/160717011-b66e621c-f093-4363-be83-eea2cda68795.JPG">]
 
 ## Built Using
 CSS/HTML/JS/API
 
-## Visit our Website
+## API Used was Spoonacular
+https://spoonacular.com/food-api/docs
 
-<!-- Need someone who has access to settings (Dr SPooky Fox) to go to settings and paste the git.io link below -->
-<!-- I do it by going to the setting of the respository and the going to the pages, you can make a link from there -->
+## Visit our Website
+https://drspookyfox.github.io/RecipeSearch/ 
 
 # This group project was completed by:
  
