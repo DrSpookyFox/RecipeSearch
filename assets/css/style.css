@@ -11,11 +11,12 @@
   /* set styles for the background image */
   .background {
     background: url('../images/Cooking-Recipe.png');
-    height: 650px;
+    height: 600%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
   }
 
   /* set styles for the header */
