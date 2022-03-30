@@ -73,7 +73,7 @@ var searchRecipies = function(recipe) {
       <p class="card-detail">Instructions:</p>
       <p> ${data.instructions}
       <p class="card-detail"> Source: <a class="sourceURL" href="${data.sourceUrl}">${data.sourceUrl}</a></p> 
-      <div id=btnClose> <a class="closeBtn" href="#" rel="modal:close">Close</a> </div>
+      <div id="btnClose"> <a class="closeBtn" href="#" rel="modal:close">Close</a> </div>
       </div>`;
       
       document.querySelector("#food-modal").innerHTML += htmlText;

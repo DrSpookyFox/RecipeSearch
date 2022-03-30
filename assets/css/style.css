@@ -1,179 +1,189 @@
 :root {
-    --primary-color: #05537b;
-    --secondary-color: rgb(170, 216, 182);
-    --tertiary-color: rgb(39, 37, 37);
+  --primary-color: #05537b;
+  --secondary-color: rgb(170, 216, 182);
+  --tertiary-color: rgb(39, 37, 37);
+}
+
+ html {
+    height: 100%;
+}
+
+  /* set styles for the background image */
+  .background {
+    background: url('../images/Cooking-Recipe.png');
+    height: 550px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 870px; /* stretches out background-picture a little further */
   }
-  
-   html {
-      height: 100%;
-  }
-  
-    /* set styles for the background image */
-    .background {
-      background: url('../images/Cooking-Recipe.png');
-      height: 550px;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 870px;
-    }
-  
-    /* set styles for the header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      /* border: 2px whitesmoke solid; */
-      /* border-radius: 10px; */
-      background-color: var(--primary-color);
-      position:sticky;
-      position: -webkit-sticky;
-      top: 0;
-      z-index: 9999;
-    }
-  
-    header h1 {
-      font-family: 'Tangerine', cursive;
-      font-size: 40px;
-      font-weight: bold;
-      color: white;
-      margin-left: 10px;
-    
-    }
-  
-    header a:hover {
-      color: whitesmoke;
-      text-shadow:none;
-    }
-  
-    header a {
-      text-shadow:none;
-      margin: 20px;
-      font-size: 1.55vw;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 9);
-      font-family: 'Open Sans', sans-serif;
-    }
-  
-    .hero {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      padding: 15px;
-      margin-bottom: 50px;
-    }
-  
-    .hero-cta h4{
-      color: rgb(82, 82, 87);
-      font-size: 24px;
-    }
-  
-    /*styles for the search box */
-    .card-search {
-      padding: 25px;
-      text-align: center;
-      width: 50%;
-      background-color: var(--secondary-color);
-      margin-bottom: 40px;
-      margin-left: 25%;
-      border-radius: 30px;
-    }
-  
-    #recipeSearch {
-    border-radius: 20px;
-  }
-  
-  input.form-input {
-    color:darkgray;
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-  .card-search button {
-      background-color: var(--primary-color);
-      color: whitesmoke;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-  /* styles for the result cards */
-  .food-title {
-    padding-top: 10px;
-    color: var(--primary-color);
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-  .food-title:hover {
-    text-decoration: underline;
-  }
-  
-  .modal {
-    margin-top: 70px;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-  }
-  
-  .closeBtn {
-    margin: 10px;
-  }
-  
-  #btnClose {
-    margin-top: 20px;
-  }
-  .card-title {
-    font-weight: bold;
-    font-size: 24px;
-    color: blue;
-  }
-  
-  .card-detail {
-    font-weight: bold;
-    color: blue;
-  }
-  
-  .sourceURL:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
+
+  /* set styles for the header */
+  header {
     display: flex;
     justify-content: space-between;
-    border: 1px whitesmoke solid;
+    /* border: 2px whitesmoke solid; */
+    /* border-radius: 10px; */
+    background-color: var(--primary-color);
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  header h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+  
+  }
+
+  header a:hover {
+    color: whitesmoke;
+    text-shadow:none;
+  }
+
+  header a {
+    text-shadow:none;
+    margin: 20px;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 9);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+
+  .hero-cta h4{
+    color: rgb(82, 82, 87);
+    font-size: 24px;
+  }
+
+  /*styles for the search box */
+  .card-search {
+    padding: 25px;
+    text-align: center;
+    width: 50%;
+    background-color: var(--secondary-color);
+    margin-bottom: 40px;
+    margin-left: 25%;
+    border-radius: 30px;
+  }
+
+  #recipeSearch {
+  border-radius: 20px;
+}
+
+input.form-input {
+  color:darkgray;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.card-search button {
     background-color: var(--primary-color);
     color: whitesmoke;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
   }
-  
-  footer h6 {
+/* styles for the result cards */
+.food-title {
+  padding-top: 10px;
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.food-title:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  margin-top: 70px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: -50px;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.modal a.close-modal {
+  position: absolute;
+  /* fixes the x button by overriding the jquery styling */
+  top: -0.5px !important; 
+  right: 0.5px !important;
+}
+
+.closeBtn {
+  margin: 5000px;
+  position: absolute;
+  left: -50;
+}
+
+#btnClose {
+  margin-top: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: blue;
+}
+
+.card-detail {
+  font-weight: bold;
+  color: blue;
+}
+
+.sourceURL:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px whitesmoke solid;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h6 {
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+footer div {
     font-family: 'Tangerine', cursive;
     font-size: 25px;
     font-weight: lighter;
-    margin-left: 10px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* MEDIA QUERY FOR Mobile phones and smaller */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: center;
+    position: relative;
   }
-  
-  footer div {
-      font-family: 'Tangerine', cursive;
-      font-size: 25px;
-      font-weight: lighter;
-      text-align: right;
-      margin-right: 10px;
+
+  menu {
+    text-align: center;
+    font-size: 25px;
   }
-  
-  /* MEDIA QUERY FOR Mobile phones and smaller */
-  @media screen and (max-width: 575px) {
-    header {
-      justify-content: center;
-      position: relative;
-    }
-  
-    menu {
-      text-align: center;
-      font-size: 25px;
-    }
-  }
+}
